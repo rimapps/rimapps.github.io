@@ -4,39 +4,82 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>RimApps – iOS Apps</title>
-<meta name="description" content="RimApps – iOS apps made in Germany.">
-<link rel="stylesheet" href="style.css">
+<meta name="description" content="RimApps – simple, privacy-friendly iOS apps made in Germany.">
+<script>!function(){var d=document.documentElement,q=new URLSearchParams(location.search).get("lang"),s=null;try{s=sessionStorage.getItem("lang")}catch(e){}var n=((navigator.languages&&navigator.languages[0])||navigator.language||"en").toLowerCase(),l=q||s||(n.slice(0,2)==="de"?"de":"en");d.lang=l==="de"?"de":"en"}()</script>
+<link rel="stylesheet" href="tw.css">
 <script src="app.js" defer></script>
 </head>
-<body>
-<header>
-  <a class="brand" href="index.html">RimApps</a>
-  <nav>
-    <a href="support.html">Support</a>
-    <a href="datenschutz.html">Datenschutz</a>
-    <a href="impressum.html">Impressum</a>
-  </nav>
+<body class="min-h-screen bg-slate-50 text-slate-900 antialiased dark:bg-slate-950 dark:text-slate-100" data-kind="home">
+<div class="pointer-events-none fixed inset-x-0 top-0 -z-10 h-80 bg-gradient-to-b from-violet-100/70 to-transparent dark:from-violet-900/20"></div>
+<header class="sticky top-0 z-20 border-b border-slate-200/70 bg-white/80 backdrop-blur-md dark:border-white/10 dark:bg-slate-950/80">
+  <div class="mx-auto flex max-w-5xl items-center justify-between gap-3 px-4 py-3">
+    <a href="index.html" class="flex items-center gap-2.5 font-bold tracking-tight text-slate-900 dark:text-white">
+      <span class="grid h-9 w-9 place-items-center rounded-xl bg-gradient-to-br from-violet-500 to-fuchsia-500 text-base text-white shadow-md shadow-violet-500/30">R</span>
+      <span class="text-lg">RimApps</span>
+    </a>
+    <nav class="flex items-center gap-1">
+      <a class="navlink hidden sm:block" href="support.html">Support</a>
+      <a class="navlink hidden sm:block" href="privacy.html"><span data-lang="de">Datenschutz</span><span data-lang="en">Privacy</span></a>
+      <div class="ml-2 flex rounded-xl bg-slate-100 p-1 dark:bg-slate-800" role="group" aria-label="Sprache / Language">
+        <button type="button" class="langbtn" data-set-lang="de" lang="de">DE</button>
+        <button type="button" class="langbtn" data-set-lang="en" lang="en">EN</button>
+      </div>
+    </nav>
+  </div>
 </header>
 <main>
-  <h1>Apps für iPhone und iPad</h1>
-  <p class="muted">Einfache, datensparsame Apps – entwickelt in Baden-Württemberg.<br>
-  Simple, privacy-friendly apps – made in Baden-Württemberg, Germany.</p>
+  <section class="mx-auto max-w-5xl px-4 pb-8 pt-16 text-center sm:pt-24">
+    <span class="inline-flex items-center gap-2 rounded-full border border-violet-200 bg-white/70 px-3 py-1 text-xs font-medium text-violet-700 dark:border-violet-500/30 dark:bg-white/5 dark:text-violet-300">
+      <span class="h-1.5 w-1.5 rounded-full bg-violet-500"></span><span data-lang="de">Apps für iPhone &amp; iPad</span><span data-lang="en">Apps for iPhone &amp; iPad</span>
+    </span>
+    <h1 class="mx-auto mt-6 max-w-3xl text-4xl font-extrabold tracking-tight sm:text-6xl">
+      <span data-lang="de">Einfache Apps,</span><span data-lang="en">Simple apps,</span>
+      <span class="block bg-gradient-to-r from-violet-600 to-fuchsia-500 bg-clip-text text-transparent"><span data-lang="de">die Ihre Daten respektieren.</span><span data-lang="en">that respect your data.</span></span>
+    </h1>
+    <p class="mx-auto mt-6 max-w-xl text-lg leading-relaxed text-slate-600 dark:text-slate-400"><span data-lang="de">Keine Werbung, kein Tracking – entwickelt in Baden-Württemberg.</span><span data-lang="en">No ads, no tracking – made in Baden-Württemberg, Germany.</span></p>
+    <div class="mt-8 flex flex-wrap justify-center gap-3">
+      <a href="#apps" class="rounded-xl bg-slate-900 px-5 py-3 text-sm font-semibold text-white shadow-lg shadow-slate-900/10 transition hover:bg-slate-700 dark:bg-white dark:text-slate-900 dark:hover:bg-slate-200"><span data-lang="de">Unsere Apps</span><span data-lang="en">Our apps</span></a>
+      <a href="support.html" class="rounded-xl border border-slate-300 bg-white px-5 py-3 text-sm font-semibold text-slate-700 transition hover:bg-slate-50 dark:border-white/15 dark:bg-white/5 dark:text-slate-200 dark:hover:bg-white/10">Support</a>
+    </div>
+  </section>
 
-  <h2>Unsere Apps · Our apps</h2>
-  <div class="card">
-    <p class="muted">Demnächst im App Store. · Coming soon to the App Store.</p>
-  </div>
+  <section class="mx-auto grid max-w-5xl gap-4 px-4 py-10 sm:grid-cols-3">
+      <div class="card">
+        <div class="grid h-11 w-11 place-items-center rounded-xl bg-violet-100 text-xl dark:bg-violet-500/15">🔒</div>
+        <h3 class="mt-4 font-semibold"><span data-lang="de">Datensparsam</span><span data-lang="en">Privacy first</span></h3>
+        <p class="mt-1 text-sm leading-relaxed text-slate-600 dark:text-slate-400"><span data-lang="de">Keine Werbung, kein Tracking, keine Nutzerprofile.</span><span data-lang="en">No ads, no tracking, no user profiles.</span></p>
+      </div>
+      <div class="card">
+        <div class="grid h-11 w-11 place-items-center rounded-xl bg-violet-100 text-xl dark:bg-violet-500/15">✨</div>
+        <h3 class="mt-4 font-semibold"><span data-lang="de">Einfach</span><span data-lang="en">Simple</span></h3>
+        <p class="mt-1 text-sm leading-relaxed text-slate-600 dark:text-slate-400"><span data-lang="de">Klare Oberflächen, die sofort verständlich sind.</span><span data-lang="en">Clean interfaces that just make sense.</span></p>
+      </div>
+      <div class="card">
+        <div class="grid h-11 w-11 place-items-center rounded-xl bg-violet-100 text-xl dark:bg-violet-500/15">🇩🇪</div>
+        <h3 class="mt-4 font-semibold"><span data-lang="de">Aus Deutschland</span><span data-lang="en">Made in Germany</span></h3>
+        <p class="mt-1 text-sm leading-relaxed text-slate-600 dark:text-slate-400"><span data-lang="de">Entwickelt in Pfullingen, Baden-Württemberg.</span><span data-lang="en">Built in Pfullingen, Baden-Württemberg.</span></p>
+      </div>
+  </section>
 
-  <h2>Kontakt · Contact</h2>
-  <p>Fragen oder Feedback? Questions or feedback? <a href="support.html">Support</a></p>
+  <section id="apps" class="mx-auto max-w-5xl scroll-mt-20 px-4 py-10">
+    <h2 class="text-2xl font-bold tracking-tight"><span data-lang="de">Unsere Apps</span><span data-lang="en">Our apps</span></h2>
+    <div class="card mt-6 flex flex-col items-center gap-2 py-12 text-center">
+      <div class="text-3xl">📱</div>
+      <p class="font-semibold"><span data-lang="de">Demnächst im App Store</span><span data-lang="en">Coming soon to the App Store</span></p>
+      <p class="text-sm text-slate-500 dark:text-slate-400"><span data-lang="de">Unsere ersten Apps sind in Arbeit.</span><span data-lang="en">Our first apps are on their way.</span></p>
+    </div>
+  </section>
 </main>
-<footer>
-  <a href="impressum.html">Impressum / Legal Notice</a>
-  <a href="datenschutz.html">Datenschutz</a>
-  <a href="privacy.html">Privacy Policy</a>
-  <a href="support.html">Support</a>
-  <a href="nutzungsbedingungen.html">Nutzungsbedingungen</a>
-  <a href="terms.html">Terms of Use</a>
+<footer class="mt-16 border-t border-slate-200 dark:border-white/10">
+  <div class="mx-auto flex max-w-5xl flex-col gap-4 px-4 py-8 sm:flex-row sm:items-center sm:justify-between">
+    <p class="text-sm text-slate-500 dark:text-slate-400">© 2026 RimApps · <span data-lang="de">Pfullingen, Deutschland</span><span data-lang="en">Pfullingen, Germany</span></p>
+    <nav class="flex flex-wrap gap-x-5 gap-y-2">
+      <a class="footlink" href="impressum.html"><span data-lang="de">Impressum</span><span data-lang="en">Legal Notice</span></a>
+      <a class="footlink" href="privacy.html"><span data-lang="de">Datenschutz</span><span data-lang="en">Privacy Policy</span></a>
+      <a class="footlink" href="terms.html"><span data-lang="de">Nutzungsbedingungen</span><span data-lang="en">Terms of Use</span></a>
+      <a class="footlink" href="support.html">Support</a>
+    </nav>
+  </div>
 </footer>
 </body>
 </html>

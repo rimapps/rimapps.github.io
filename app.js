@@ -23,6 +23,10 @@
   function setLang(l) {
     d.lang = l === 'de' ? 'de' : 'en';
     try { sessionStorage.setItem('lang', d.lang); } catch (e) {}
+    if (params.has('lang')) {
+      params.set('lang', d.lang);
+      try { history.replaceState(null, '', location.pathname + '?' + params.toString() + location.hash); } catch (e) {}
+    }
     setTitle();
   }
 

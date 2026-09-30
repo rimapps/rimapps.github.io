@@ -1,4 +1,14 @@
 // Per-app legal pages: privacy.html?app=Gold%20Identifier, terms.html?app=..., etc.
+// Email addresses are assembled in the browser so simple spam bots don't find them
+document.addEventListener('DOMContentLoaded', function () {
+  document.querySelectorAll('a.em[data-u][data-d]').forEach(function (a) {
+    var e = a.getAttribute('data-u') + '@' + a.getAttribute('data-d');
+    var s = a.getAttribute('data-s');
+    a.href = 'mailto:' + e + (s ? '?subject=' + encodeURIComponent(s) : '');
+    a.textContent = e;
+  });
+});
+
 (function () {
   var params = new URLSearchParams(location.search);
   var app = (params.get('app') || '').replace(/\s+/g, ' ').trim().slice(0, 60);
